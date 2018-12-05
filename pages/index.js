@@ -8,7 +8,7 @@ import Search from "../components/Search";
 class Index extends React.Component {
   static async getInitialProps() {
     const req = await fetch(
-      "https://www.omdbapi.com/?s=spiderman&type=movie&apikey=33936251&page=1"
+      "https://www.omdbapi.com/?s=batman&type=movie&apikey=33936251&page=1"
     );
     const { Search, totalResults } = await req.json();
     return { Search, totalResults };

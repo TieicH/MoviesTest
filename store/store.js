@@ -9,7 +9,7 @@ const initialState = {
   totalPages: 2,
   search: [],
   morePages: true,
-  movie: "spiderman",
+  movie: "batman",
   category: "movie"
 };
 

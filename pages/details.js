@@ -1,14 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { connect } from "react-redux";
-import MovieGrid from "../components/MovieGrid";
-import { setTotalResults, firstCharged } from "../store/store";
-import Search from "../components/Search";
+import DetailGrid from "../components/DetailGrid";
 
 class Detail extends React.Component {
   static async getInitialProps({ query }) {
     const { id } = query;
-    const req = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=33936251`);
+    const req = await fetch(
+      `http://www.omdbapi.com/?i=${id}&plot=full&apikey=33936251`
+    );
     return { movie: await req.json() };
   }
 
@@ -16,7 +15,7 @@ class Detail extends React.Component {
     const { movie } = this.props;
     return (
       <Layout title={movie.Title}>
-        <h1>{movie.Title}</h1>
+        <DetailGrid movie={movie} />
       </Layout>
     );
   }

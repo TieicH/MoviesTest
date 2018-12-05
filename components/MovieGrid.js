@@ -109,10 +109,21 @@ class Movie extends React.Component {
             }
             .movieContainer {
               width: calc((100% / 4) - 20px);
+              min-height: 30rem;
+              margin-bottom: 2rem;
               text-decoration: none;
+              border: 1px solid black;
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              padding-top: 3px;
+              border-radius: 2px;
             }
             .imgMovie {
-              width: 100%;
+              width: 230px;
+              height: 340px;
+              margin: 0 auto;
+              display: block;
             }
           `}
         </style>

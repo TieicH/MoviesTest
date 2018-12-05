@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 class Layout extends React.Component {
   render() {
@@ -8,7 +9,11 @@ class Layout extends React.Component {
         <Head>
           <title>{title}</title>
         </Head>
-        <header>Movies</header>
+        <header>
+          <Link href="/">
+            <a className="linkHeader">Movies</a>
+          </Link>
+        </header>
         {children}
         <style global jsx>
           {`
@@ -24,6 +29,10 @@ class Layout extends React.Component {
               padding: 15px 0;
               text-align: center;
               font-size: 30px;
+            }
+            .linkHeader {
+              color: #fff;
+              text-decoration: none;
             }
           `}
         </style>
